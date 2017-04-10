@@ -2,27 +2,13 @@ import axios from 'axios';
 
 export function signup(username, password, confirm){
   if(password === confirm){
-    axios({
-      method: 'post',
-      url: '/node/wallet',
-      data: {
-        'id': username,
-        'passphrase': username,
-        'type':"pubkeyhash"
-      }
-    }).then((resp)=>{
 
     return axios({
       method: 'post',
       url: '/signup',
       data: {
         'username': username,
-        'password': password,
-        'confirm': confirm,
-        'id': resp.data.id,
-        'passphrase': username,
-        'address': resp.data.account.receiveAddress,
-        'coin': 0
+        'password': password
       }
     }).then((resp)=>{
       if(resp.data === 'already in database'){
@@ -44,7 +30,7 @@ export function signup(username, password, confirm){
         error: err
       });
     });
-  })}else{
+  }else{
     this.setState({
       message: "Passwords Do Not Match" 
     });

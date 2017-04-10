@@ -7,21 +7,36 @@ import {Router, IndexRoute, Route, browserHistory} from 'react-router';
 //Redux 
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-import reducers from 'Reducers';
+import reducers from './reducers';
 import { syncHistoryWithStore } from 'react-router-redux';	
 import thunk from 'redux-thunk';
 
 
 //components `
 import App from 'App';
-import Login from './components/Login';
+import LoginContainer from './containers/LoginContainer';
 import Wrapper from './components/Wrapper';
 
-ReactDOM.render((
-	<Router history={browserHistory}>
-		<Route path="/" pageId="wrapper" component={Wrapper}>
-			<IndexRoute pageId="index" component={App}/>
-			<Route path="/login" pageId="Login" component={Login}/>
-		</Route>
+const store = createStore(
+	reducers,
+	applyMiddleware(thunk)
+	);
 
-	</Router>), document.getElementById('root'));
+	// compose(
+	// 	applyMiddleware(thunk),
+	// 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+	//	);
+
+const history = syncHistoryWithStore(browserHistory, store);
+
+
+
+ReactDOM.render((
+	<Provider store={store}>
+		<Router history={history}>
+			<Route path="/" pageId="wrapper" component={Wrapper}>
+				<IndexRoute pageId="index" component={App}/>
+				<Route path="/login" pageId="Login" component={LoginContainer}/>
+			</Route>
+		</Router>
+	</Provider>), document.getElementById('root'));
