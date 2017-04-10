@@ -6,7 +6,8 @@ export default class App extends Component {
     return (	
         <div>
       		Something Goes here<br/>
-      		<Link to="/login">Login</Link> 
+      		<Link to="/login">Login</Link> <br/>
+      		<Link to="/signup">SignUp</Link> 
       	 </div>
     );
   }

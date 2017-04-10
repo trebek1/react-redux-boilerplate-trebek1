@@ -1,45 +1,14 @@
+.trials{
+	padding: 10px;
+	height: 40px;
+	width: 120px;
+	float: left;
+}	
+
 .app-wrapper {
 	padding-top: 60px;
 }
-.question-title {
-	font-size: 24px;
-	font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
-}
 
-.answer-title {
-	font-size: 18px;
-	font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";	
-}
-
-.btc-count {
-	font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
-	display: inline-block; 
-    vertical-align: middle;
-    text-align: right;
-    height: 100%;
-    width: 50%;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-.btc-img {
-	padding: 14px 20px 14px 10px;
-	height: 28px;
-    width: 18px;
-}
-
-.img-wrapper {
-	position: relative;
-	display: inline-block;
-	float: right;
-	text-align: center;
-	width: 50px;
-	height: 100%;
-}
-
-.btc-wrapper{
-	width: 100px;
-}
 
 div.link a:hover {
 	opacity: 0.5;
@@ -50,9 +19,7 @@ div.link a:selected {
 }
 
 .header {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	
 	font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
 	background: #fafafb;
 	position: fixed;
@@ -68,56 +35,6 @@ div.link a:selected {
 	box-shadow: 0 1px 0 rgba(12,13,14,0.15);
 }
 
-.arrows, .qarrows {
-	display: inline-block;
-	width: 60px;
-	height: 100%;
-}
-
-.qarrows {
-	position: relative;
-	top: -700px;
-}
-
-.arrows {
-	position: relative;
-	top: -589px;
-}
-
-.arrow-up, .arrow-down, .accept {
-	width: 30px;
-	display: block;
-	margin: 0 auto 5px auto;
-	cursor: pointer;
-}
-
-.avotes, .qvotes {
-	font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
-	width: 30px;
-	display: block;
-	margin: 0 auto 5px auto;
-	text-align: center;
-	color: #6a737c;
-	font-size: 20px;
-}
-
-.arrow-down {
-    -moz-transform: scaleY(-1);
-    -o-transform: scaleY(-1);
-    -webkit-transform: scaleY(-1);
-    transform: scaleY(-1);
-}
-
-.fake-qa {
-	display: inline-block;
-	width: 728px;
-}
-
-.unblocker-title {
-	padding: 15px 35px 18px;
-	height: 50%;
-	width: 200px;
-}
 
 .link {
 	padding: 14px 20px 14px 20px;
@@ -227,18 +144,6 @@ div.link a:selected {
 	width: 728px;
 }
 
-.questions {
-	border-top: 1px solid #e4e6e8;
-	height: 275px;
-	width: 728px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-}
-
 .form-container-login {
 	font-family: "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
 	font-size: 17px;
@@ -263,14 +168,6 @@ div.link a:selected {
 	left: 0;
 	right: 0;
 	margin: auto;
-}
-
-.qa-container {
-	width: 800px;
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
 }
 
 .form-title {

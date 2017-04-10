@@ -3,30 +3,21 @@ var salt = bcrypt.genSaltSync(10);
 var mongoose = require("mongoose");
 
 var userSchema = new mongoose.Schema({
-  id: String,
-  passphrase: String,
-  address: String,
   username: String,
-  passwordDigest: String,
-  coin: Number
+  passwordDigest: String
 });
 
 userSchema.methods.checkPassword = function(password) {
         return bcrypt.compareSync(password, this.passwordDigest);
 };
 
-userSchema.statics.createSecure = function (username, password,id,passphrase,address, cb) {
+userSchema.statics.createSecure = function (username, password, cb) {
   var that = this;
   bcrypt.genSalt(function (err, salt) {
     bcrypt.hash(password, salt, function (err, hash) {
       that.create({
         username: username,
-        id: id,
-        passphrase: passphrase, 
-        address: address,
-        passwordDigest: hash,
-        coin: 0,
-        log: []
+        passwordDigest: hash
        }, cb)
     });
   })

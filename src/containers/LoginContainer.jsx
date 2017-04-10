@@ -12,12 +12,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
 	return {
-		loginRoute: (username,password) => {
-		 	dispatch(loginRoute(username,password));
-		},
-		logoutRoute: (username,password) => {
-		 	dispatch(logoutRoute());
-		},
 		dispatch
 	}
 };

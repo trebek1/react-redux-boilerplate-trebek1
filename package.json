@@ -29,6 +29,7 @@
     "body-parser": "^1.17.1",
     "css-loader": "^0.26.1",
     "express-session": "^1.15.2",
+    "file-loader": "^0.11.1",
     "jsx-loader": "^0.13.2",
     "mongoose": "^4.9.4",
     "prop-types": "^15.5.6",
