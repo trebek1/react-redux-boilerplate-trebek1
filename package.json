@@ -1,7 +1,7 @@
 {
-  "name": "lets-workout",
+  "name": "project-boilerplate",
   "version": "1.0.0",
-  "description": "Basic React with ES6 workout app",
+  "description": "Basic ES6 React Redux Boilerplate",
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src"
